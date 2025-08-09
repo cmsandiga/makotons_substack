@@ -1,7 +1,6 @@
 # PostgreSQL PageInspect Demo Setup
 
 Setup to explore PostgreSQL internals and real B-trees for Part 3 article.
-Based on the exact examples from Part 2 with maria@example.com and identical data structure.
 
 ## Requirements
 
