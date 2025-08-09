@@ -1,0 +1,17 @@
+services:
+  postgres:
+    build: .
+    container_name: postgres_pageinspect_demo
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: makotons_substack
+      POSTGRES_USER: makotons
+      POSTGRES_PASSWORD: makotons
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./init-scripts:/docker-entrypoint-initdb.d
+    command: postgres -c log_statement=all -c log_min_messages=info
+
+volumes:
+  postgres_data:
