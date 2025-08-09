@@ -12,6 +12,13 @@ Setup to explore PostgreSQL internals and real B-trees for Part 3 article.
 ## Quick Start
 
 ```bash
+# First, verify PostgreSQL port 5432 is available
+sudo netstat -tlnp | grep :5432 || echo "Port 5432 is available"
+
+# If port 5432 is in use, stop the conflicting service:
+# sudo systemctl stop postgresql
+# Or modify docker-compose.yml to use a different port
+
 # Build and start the container
 docker-compose up -d
 
